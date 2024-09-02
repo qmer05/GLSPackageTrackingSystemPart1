@@ -1,4 +1,5 @@
-package app;
+package app.config;
+import app.entities.Package;
 
 import app.entities.Package;
 import jakarta.persistence.EntityManagerFactory;
@@ -66,7 +67,7 @@ public class HibernateConfig {
 
 
     private static String getDBName() {
-        return Utils.getPropertyValue("db.name", "properties-from-pom.properties");
+        return "glspackagetrackingsystempart1";
     }
     private static Properties setBaseProperties(Properties props){
         props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
